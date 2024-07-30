@@ -5,7 +5,6 @@ Optimize with Ray Tune and HyperOPT
 
 import ray
 from ray import tune
-from ray.tune.experiment import trial
 from ray.tune.search.hyperopt import HyperOptSearch
 from hyperopt import hp
 from ray.data import Dataset, Preprocessor
@@ -23,7 +22,6 @@ train, valid = dataset.train_test_split(test_size=0.25)
 
 
 def objective(config):
-
     parameters = {
         "eval_metric": "rmse",
         "eta": config["eta"],
@@ -52,15 +50,19 @@ method = HyperOptSearch()
 samples = 200
 
 search_config = {
-    "eta": tune.loguniform(0.01,1),
-    "gamma": tune.randint(0,10),
-    "max_depth": tune.randint(3,10),
-    "min_child_weight": tune.randint(1,5),
-    "subsample": tune.loguniform(0.5,1),
-    "colsample_bytree": tune.loguniform(0.5,1),
-    "lambda": tune.randint(1,5),
-    "alpha": tune.randint(0,5)
+    "eta": tune.loguniform(0.01, 1),
+    "gamma": tune.randint(0, 10),
+    "max_depth": tune.randint(3, 10),
+    "min_child_weight": tune.randint(1, 5),
+    "subsample": tune.loguniform(0.5, 1),
+    "colsample_bytree": tune.loguniform(0.5, 1),
+    "lambda": tune.randint(1, 5),
+    "alpha": tune.randint(0, 5)
 }
+
+
+def trial_str_creator(trial):
+    return trial.trial_id
 
 
 tuner = tune.Tuner(
@@ -70,7 +72,7 @@ tuner = tune.Tuner(
         mode="min",
         search_alg=method,
         num_samples=samples,
-        trial_dirname_creator=trial.TRIAL_ID
+        trial_dirname_creator=trial_str_creator
     ),
     param_space=search_config,
 )
@@ -78,4 +80,3 @@ tuner = tune.Tuner(
 results = tuner.fit()
 print("Optimal hyperparameters: ", results.get_best_result().config)
 print(results.get_best_result())
-

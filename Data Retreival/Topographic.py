@@ -11,7 +11,7 @@ def getAspect(area, savepath):
     dataset = gdal.Open(file_aspect, gdal.GA_ReadOnly)
 
     output = gdal.Warp(savepath + ".tif", dataset,
-                            outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
+                       outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
 
     output.close()
     dataset.close()
@@ -24,7 +24,7 @@ def getElevation(area, savepath):
     dataset = gdal.Open(file_elevation, gdal.GA_ReadOnly)
 
     output = gdal.Warp(savepath + ".tif", dataset,
-                            outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
+                       outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
 
     output.close()
     dataset.close()
@@ -37,7 +37,7 @@ def getSlope(area, savepath):
     dataset = gdal.Open(file_slope, gdal.GA_ReadOnly)
 
     output = gdal.Warp(savepath + ".tif", dataset,
-                            outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
+                       outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
 
     output.close()
     dataset.close()
@@ -50,7 +50,7 @@ def getTWI(area, savepath):
     dataset = gdal.Open(file_twi, gdal.GA_ReadOnly)
 
     output = gdal.Warp(savepath + ".tif", dataset,
-                            outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
+                       outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
 
     output.close()
     dataset.close()
@@ -63,7 +63,7 @@ def getTPI(area, savepath):
     dataset = gdal.Open(file_tpi, gdal.GA_ReadOnly)
 
     output = gdal.Warp(savepath + ".tif", dataset,
-                            outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
+                       outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
 
     output.close()
     dataset.close()

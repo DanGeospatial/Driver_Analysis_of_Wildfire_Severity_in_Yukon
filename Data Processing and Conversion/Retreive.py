@@ -9,5 +9,6 @@ fires = ['81', '326', '162', '109', '83', '228', '113', '227', '157', '115', '64
          '329', '15', '129', '28', '321', '333']
 
 polygons = "D:/Research/Masters/5_Extracted/dNBR/Polygons/"
+export_path = "I:/Wildfire_Extracted_v2/"
 
 for fire in fires:

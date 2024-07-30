@@ -14,7 +14,7 @@ import xgboost
 # Import Data
 dNBR3Y = "D:/Research/Masters/8_RStudio/Input Data/ERA5/total/dNBR_total_3y.csv"
 
-ray.init(include_dashboard=False, runtime_env={"working_dir": "E:/Temp"})
+ray.init(include_dashboard=False)
 
 # Preprocess Data
 dataset = ray.data.read_csv(dNBR3Y)

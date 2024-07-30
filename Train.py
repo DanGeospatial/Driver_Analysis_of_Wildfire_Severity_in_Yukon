@@ -8,6 +8,7 @@ from ray import tune
 from ray.tune.search.hyperopt import HyperOptSearch
 from hyperopt import hp
 from ray.data import Dataset, Preprocessor
+from ray.train import ScalingConfig
 from ray.train.xgboost import XGBoostTrainer
 import xgboost
 
@@ -19,6 +20,11 @@ ray.init(include_dashboard=False)
 # Preprocess Data
 dataset = ray.data.read_csv(dNBR3Y)
 train, valid = dataset.train_test_split(test_size=0.25)
+
+scaling_config = ScalingConfig(
+    num_workers=8,
+    use_gpu=True
+)
 
 
 def objective(config):
@@ -37,11 +43,12 @@ def objective(config):
     trainer = XGBoostTrainer(
         datasets={"train": train, "valid": valid},
         label_column="dNBR",
-        params=parameters
+        params=parameters,
+        scaling_config=scaling_config
     )
 
     trained = trainer.fit()
-    test_rmse = trained.metrics.get("rmse")
+    test_rmse = trained.metrics.get("valid-rmse")
 
     return {"rmse": test_rmse}
 

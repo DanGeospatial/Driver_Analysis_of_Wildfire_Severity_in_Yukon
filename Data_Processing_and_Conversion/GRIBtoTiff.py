@@ -3,7 +3,7 @@ GRIB2 Utilities
 """
 
 
-from osgeo import gdal
+import whitebox_tools
 
 
 def gribUtils(gribFile, tiffPath):

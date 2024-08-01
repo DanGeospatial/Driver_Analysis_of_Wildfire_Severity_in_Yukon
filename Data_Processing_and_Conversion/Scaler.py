@@ -2,25 +2,20 @@
 Resample a raster to 30m
 """
 
-import rasterio
-from rasterio.enums import Resampling
+import whitebox_tools
+
+wbt = whitebox_tools.WhiteboxTools()
 
 
 def resample_nearest(raster):
-    input_raster = rasterio.open(raster + ".tif")
     output_name = raster + "_ rs" + ".tiff"
 
-    output = gdal.Warp(output_name, input_raster, xRes=30, yRes=30, resampleAlg="GRA_NearestNeighbour")
-
+    output = wbt.resample(inputs=raster, output=output_name, cell_size=30, method='nn')
     output.close()
-    input_raster.close()
 
 
 def resample_cubic(raster):
-    input_raster = gdal.Open(raster + ".tif", gdal.GA_ReadOnly)
     output_name = raster + "_ rs" + ".tiff"
 
-    output = gdal.Warp(output_name, input_raster, xRes=30, yRes=30, resampleAlg="GRA_Cubic")
-
+    output = wbt.resample(inputs=raster, output=output_name, cell_size=30, method='cc')
     output.close()
-    input_raster.close()

@@ -1,18 +1,14 @@
 """
 Load land cover and clip
 """
-from osgeo import gdal
+import whitebox_tools
+
+wbt = whitebox_tools.WhiteboxTools()
 
 
 def mnbr(area, savepath):
-    file_mnbr = "D:/Research/Masters/4_Model_Files/Ecology/Max Veg/mNBR.tif"
+    file_mnbr = "I:/Wildfire_Aligned_Rasters_v2/mNBR.tif"
+    save_loc = savepath + ".tif"
 
-    bounds = gdal.Open(area, gdal.GA_ReadOnly)
-    dataset = gdal.Open(file_mnbr, gdal.GA_ReadOnly)
-
-    output = gdal.Warp(savepath + ".tif", dataset,
-                       outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
-
-    output.close()
-    dataset.close()
+    wbt.clip_raster_to_polygon(i=file_mnbr, polygons=area, output=save_loc)
 

@@ -1,69 +1,43 @@
 """
 These have been calculated locally using SAGA GIS for the Yukon
 """
-from osgeo import gdal
+import whitebox_tools
+
+wbt = whitebox_tools.WhiteboxTools()
+
+wbt.set_whitebox_dir("E:/Users/speed/anaconda3/envs/Yukon_Wildfire_Drivers_v2/Library/bin")
 
 
 def getAspect(area, savepath):
-    file_aspect = "D:/Research/Masters/4_Model_Files/Topography/Aspect/Aspect_clip_Resample.tif"
+    file_aspect = "I:/Wildfire_Aligned_Rasters_v2/Aspect_clip_Resample.tif"
+    save_loc = savepath + "_Aspect" + ".tif"
 
-    bounds = gdal.Open(area, gdal.GA_ReadOnly)
-    dataset = gdal.Open(file_aspect, gdal.GA_ReadOnly)
-
-    output = gdal.Warp(savepath + ".tif", dataset,
-                       outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
-
-    output.close()
-    dataset.close()
+    wbt.clip_raster_to_polygon(i=file_aspect, polygons=area, maintain_dimensions=True, output=save_loc)
 
 
 def getElevation(area, savepath):
-    file_elevation = "D:/Research/Masters/4_Model_Files/Topography/No Sinks/Yukon_Elev_no_sinks_Resample.tif"
+    file_elevation = "I:/Wildfire_Aligned_Rasters_v2/Yukon_Elev_no_sinks_Resample.tif"
+    save_loc = savepath + "_Elevation" + ".tif"
 
-    bounds = gdal.Open(area, gdal.GA_ReadOnly)
-    dataset = gdal.Open(file_elevation, gdal.GA_ReadOnly)
-
-    output = gdal.Warp(savepath + ".tif", dataset,
-                       outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
-
-    output.close()
-    dataset.close()
+    wbt.clip_raster_to_polygon(i=file_elevation, polygons=area, output=save_loc)
 
 
 def getSlope(area, savepath):
-    file_slope = "D:/Research/Masters/4_Model_Files/Topography/No Sinks/Slope_clip_Resample.tif"
+    file_slope = "I:/Wildfire_Aligned_Rasters_v2/Slope_clip_Resample.tif"
+    save_loc = savepath + "_Slope" + ".tif"
 
-    bounds = gdal.Open(area, gdal.GA_ReadOnly)
-    dataset = gdal.Open(file_slope, gdal.GA_ReadOnly)
-
-    output = gdal.Warp(savepath + ".tif", dataset,
-                       outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
-
-    output.close()
-    dataset.close()
+    wbt.clip_raster_to_polygon(i=file_slope, polygons=area, output=save_loc)
 
 
 def getTWI(area, savepath):
-    file_twi = "D:/Research/Masters/4_Model_Files/Topography/No Sinks/TopographicWetnessIndex_clip_Resample.tif"
+    file_twi = "I:/Wildfire_Aligned_Rasters_v2/TopographicWetnessIndex_clip_Resample.tif"
+    save_loc = savepath + "_twi" + ".tif"
 
-    bounds = gdal.Open(area, gdal.GA_ReadOnly)
-    dataset = gdal.Open(file_twi, gdal.GA_ReadOnly)
-
-    output = gdal.Warp(savepath + ".tif", dataset,
-                       outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
-
-    output.close()
-    dataset.close()
+    wbt.clip_raster_to_polygon(i=file_twi, polygons=area, output=save_loc)
 
 
 def getTPI(area, savepath):
-    file_tpi = "D:/Research/Masters/4_Model_Files/Topography/No Sinks/TopographicPositionIndex_clip_resample.tif"
+    file_tpi = "I:/Wildfire_Aligned_Rasters_v2/TopographicPositionIndex_clip_resample.tif"
+    save_loc = savepath + "_tpi" + ".tif"
 
-    bounds = gdal.Open(area, gdal.GA_ReadOnly)
-    dataset = gdal.Open(file_tpi, gdal.GA_ReadOnly)
-
-    output = gdal.Warp(savepath + ".tif", dataset,
-                       outputBounds=[bounds.xmin, bounds.ymin, bounds.xmax, bounds.ymax])
-
-    output.close()
-    dataset.close()
+    wbt.clip_raster_to_polygon(i=file_tpi, polygons=area, output=save_loc)

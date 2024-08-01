@@ -3,9 +3,6 @@ GRIB2 Utilities
 """
 
 
-import whitebox_tools
-
-
 def gribUtils(gribFile, tiffPath):
     band = []
     outtype = "GTiff"

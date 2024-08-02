@@ -2,8 +2,9 @@
 Get all the datasets for each fire. Put the results in a folder as csv.
 """
 from Data_Retreival.Topographic import getAspect, getElevation, getSlope, getTWI, getTPI
-from Data_Retreival.Fire_danger_indices_ERA5 import getERA5L
-from Data_Retreival.Fire_Severity import getdNBR
+from Data_Retreival.Fire_danger_indices_ERA5 import getERA5L, getClimate
+from Data_Retreival.Fire_Severity import getdNBR, getmNBR, getpre
+from Data_Retreival.Land_Cover import getLC
 from Data_Processing_and_Conversion.Scaler import resample_cubic
 
 fires = ['81', '326', '162', '109', '83', '228', '113', '227', '157', '115', '64', '174', '170', '233', '243', '58',
@@ -39,10 +40,17 @@ if do_climate:
 for fire in fires:
     fire_box = polygons + fire + "/" + fire + ".shp"
     save_loc = export_path + fire + "/" + fire
+    fire_index = fire_year.index(fire)
+    year_of_fire = fire_year[fire_index]
 
     getdNBR(fire_box, fire, save_loc)
+    getmNBR(fire_box, save_loc)
     getAspect(fire_box, save_loc)
     getTPI(fire_box, save_loc)
     getTWI(fire_box, save_loc)
     getSlope(fire_box, save_loc)
     getElevation(fire_box, save_loc)
+    getLC(fire_box, save_loc)
+    getpre(fire_box, year_of_fire, save_loc)
+    # Check getClimate to choose which average period is extracted
+    getClimate(fire_box, year_of_fire, save_loc)

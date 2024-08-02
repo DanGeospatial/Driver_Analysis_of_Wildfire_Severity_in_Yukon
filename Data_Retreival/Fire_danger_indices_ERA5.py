@@ -1,9 +1,12 @@
 import cdsapi
 import ee
 import geemap
+import whitebox_tools
 
 url = "https://earthengine-highvolume.googleapis.com"
 out_loc = "I:/Wildfire_Climate_Export_v2/"
+wbt = whitebox_tools.WhiteboxTools()
+wbt.set_whitebox_dir("E:/Users/speed/anaconda3/envs/Yukon_Wildfire_Drivers_v2/Library/bin")
 
 # Initialize Earth Engine Api
 # More information at developers.google.com/earth-engine/guides/python_install-conda#windows
@@ -66,3 +69,16 @@ def getERA5L(year):
     average = dataset.reduce(ee.Reducer.mean()).clip(boundary)
 
     geemap.ee_to_geotiff(ee_object=average, output=output, resolution=11132)
+
+
+def getClimate(area, year, savepath):
+    # This function is for yearly or seasonally averaged data
+    # - 3 for 3y average before fire
+    # year = year for current fire season
+
+    year = int(year)
+    year = year - 3
+    file_pre = ("I:/Wildfire_Aligned_Rasters_v2/average_" + str(year) + ".tif")
+    save_loc = savepath + "_clm" + ".tif"
+
+    wbt.clip_raster_to_polygon(i=file_pre, polygons=area, maintain_dimensions=True, output=save_loc)

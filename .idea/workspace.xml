@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="update Retreive.py testing and formatting">
+    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="fix resample">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data_Processing_and_Conversion/Retreive.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Processing_and_Conversion/Retreive.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_Retreival/Fire_Severity.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Retreival/Fire_Severity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_Retreival/Fire_danger_indices_ERA5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Retreival/Fire_danger_indices_ERA5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_Retreival/Land_Cover.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Retreival/Land_Cover.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +201,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722561628376</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="finish Retreive.py and helper functions">
+      <option name="closed" value="true" />
+      <created>1722620735485</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1722620735485</updated>
+    </task>
+    <task id="LOCAL-00017" summary="fix resample">
+      <option name="closed" value="true" />
+      <created>1722621080906</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1722621080906</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,6 +246,8 @@
     <MESSAGE value="fix a lot of things" />
     <MESSAGE value="update title" />
     <MESSAGE value="update Retreive.py testing and formatting" />
-    <option name="LAST_COMMIT_MESSAGE" value="update Retreive.py testing and formatting" />
+    <MESSAGE value="finish Retreive.py and helper functions" />
+    <MESSAGE value="fix resample" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix resample" />
   </component>
 </project>

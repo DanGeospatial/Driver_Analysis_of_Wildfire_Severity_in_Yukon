@@ -28,9 +28,11 @@ resample = True
 
 # Only turn this on if you want to extract new climate data
 # Right now it is set to fire season
-do_climate = False
+do_climate = True
 if do_climate:
-    for year in fire_year:
+    # Remove duplicate years to speed up processing
+    years_trim = list(set(fire_year))
+    for year in years_trim:
         getERA5L(year)
         image = climate_loc + year + ".tiff"
         resample_cubic(image)

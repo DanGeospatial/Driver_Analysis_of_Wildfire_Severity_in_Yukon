@@ -4,7 +4,6 @@ These have been calculated locally using SAGA GIS for the Yukon
 import whitebox_tools
 
 wbt = whitebox_tools.WhiteboxTools()
-
 wbt.set_whitebox_dir("E:/Users/speed/anaconda3/envs/Yukon_Wildfire_Drivers_v2/Library/bin")
 
 

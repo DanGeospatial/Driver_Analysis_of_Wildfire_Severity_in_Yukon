@@ -2,6 +2,7 @@ import cdsapi
 import ee
 import geemap
 import whitebox_tools
+from Data_Processing_and_Conversion.Scaler import resample_cubic
 
 url = "https://earthengine-highvolume.googleapis.com"
 out_loc = "I:/Wildfire_Climate_Export_v2/"
@@ -71,7 +72,7 @@ def getERA5L(year):
     geemap.ee_to_geotiff(ee_object=average, output=output, resolution=11132)
 
 
-def getClimate(area, year, savepath):
+def getClimate(area, year, savepath, resample):
     # This function is for yearly or seasonally averaged data
     # - 3 for 3y average before fire
     # year = year for current fire season
@@ -82,3 +83,6 @@ def getClimate(area, year, savepath):
     save_loc = savepath + "_clm" + ".tif"
 
     wbt.clip_raster_to_polygon(i=file_pre, polygons=area, maintain_dimensions=True, output=save_loc)
+
+    if resample:
+        resample_cubic(save_loc)

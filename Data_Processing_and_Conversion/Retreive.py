@@ -1,11 +1,7 @@
 """
 Get all the datasets for each fire. Put the results in a folder as csv.
 """
-from Data_Retreival.Topographic import getAspect
-from Data_Retreival.Topographic import getElevation
-from Data_Retreival.Topographic import getSlope
-from Data_Retreival.Topographic import getTWI
-from Data_Retreival.Topographic import getTPI
+from Data_Retreival.Topographic import getAspect, getElevation, getSlope, getTWI, getTPI
 from Data_Retreival.Fire_danger_indices_ERA5 import getERA5L
 from Data_Retreival.Fire_Severity import getdNBR
 from Data_Processing_and_Conversion.Scaler import resample_cubic
@@ -46,3 +42,7 @@ for fire in fires:
 
     getdNBR(fire_box, fire, save_loc)
     getAspect(fire_box, save_loc)
+    getTPI(fire_box, save_loc)
+    getTWI(fire_box, save_loc)
+    getSlope(fire_box, save_loc)
+    getElevation(fire_box, save_loc)

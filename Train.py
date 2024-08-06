@@ -44,7 +44,8 @@ def objective(config):
         datasets={"train": train, "valid": valid},
         label_column="dNBR",
         params=parameters,
-        scaling_config=scaling_config
+        scaling_config=scaling_config,
+        # num_boost_round and num_parallel_tree
     )
 
     trained = trainer.fit()
@@ -54,8 +55,9 @@ def objective(config):
 
 
 method = HyperOptSearch()
-samples = 200
+samples = 1000
 
+#
 search_config = {
     "eta": tune.loguniform(0.01, 1),
     "gamma": tune.randint(0, 10),

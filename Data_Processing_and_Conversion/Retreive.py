@@ -28,7 +28,7 @@ resample = True
 
 # Only turn this on if you want to extract new climate data
 # Right now it is set to fire season
-do_climate = True
+do_climate = False
 if do_climate:
     # Remove duplicate years to speed up processing
     years_trim = list(set(fire_year))
@@ -45,7 +45,7 @@ if do_climate:
 for fire in fires:
     fire_box = polygons + fire + "/" + fire + ".shp"
     save_loc = export_path + fire + "/" + fire
-    fire_index = fire_year.index(fire)
+    fire_index = fires.index(fire)
     year_of_fire = fire_year[fire_index]
 
     getdNBR(fire_box, fire, save_loc)

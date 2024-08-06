@@ -57,10 +57,10 @@ def getFWIDanger(month, year, save_path):
 
 
 def getERA5L(year):
-    boundary = ee.Image("users/danielnelsonca/Projects/Arctic_Ecozones_in_Canada")
+    boundary = ee.FeatureCollection("users/danielnelsonca/Projects/Arctic_Ecozones_in_Canada")
 
-    start_date = "'" + year + "-" + "05" + "'"
-    end_date = "'" + year + "-" + "09" + "'"
+    start_date = year + "-" + "05"
+    end_date = year + "-" + "09"
     output = out_loc + year + ".tiff"
 
     dataset = (ee.ImageCollection("ECMWF/ERA5_LAND/MONTHLY_AGGR")

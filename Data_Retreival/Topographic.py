@@ -11,7 +11,7 @@ def getAspect(area, savepath):
     file_aspect = "I:/Wildfire_Aligned_Rasters_v2/Aspect_clip_Resample.tif"
     save_loc = savepath + "_Aspect" + ".tif"
 
-    wbt.clip_raster_to_polygon(i=file_aspect, polygons=area, maintain_dimensions=True, output=save_loc)
+    wbt.clip_raster_to_polygon(i=file_aspect, polygons=area, output=save_loc)
 
 
 def getElevation(area, savepath):

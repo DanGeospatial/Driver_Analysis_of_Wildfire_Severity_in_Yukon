@@ -1,6 +1,7 @@
 """
 GRIB2 Utilities
 """
+from osgeo import gdal
 
 
 def gribUtils(gribFile, tiffPath):

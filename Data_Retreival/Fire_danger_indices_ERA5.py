@@ -89,6 +89,6 @@ def getClimate(area, year, savepath):
     for band in bands:
         file_b = "I:/Wildfire_Aligned_Rasters_v2/average_" + str(year) + "_" + str(band) + ".tif"
         output_b = "I:/Wildfire_Aligned_Rasters_v2/average_" + str(year) + "_" + str(band) + "_rs" + ".tiff"
-        save_loc = savepath + "_clm" + ".tif"
+        save_loc = savepath + "_" + str(band) + "_clm" + ".tif"
         resample_cubic(file_b)
         wbt.clip_raster_to_polygon(i=output_b, polygons=area, output=save_loc)

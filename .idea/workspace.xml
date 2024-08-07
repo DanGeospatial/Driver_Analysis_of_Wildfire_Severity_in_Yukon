@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="bug fixes">
+    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="more bug fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_Processing_and_Conversion/Compiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Processing_and_Conversion/Compiler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_Processing_and_Conversion/Retreive.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Processing_and_Conversion/Retreive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_Processing_and_Conversion/Scaler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Processing_and_Conversion/Scaler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data_Retreival/Fire_danger_indices_ERA5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Retreival/Fire_danger_indices_ERA5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Train.py" beforeDir="false" afterPath="$PROJECT_DIR$/Train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +53,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Python.Compiler.executor&quot;: &quot;Run&quot;,
     &quot;Python.Fire_danger_indices_ERA5.executor&quot;: &quot;Run&quot;,
     &quot;Python.Plotter_OLD3Y.executor&quot;: &quot;Run&quot;,
     &quot;Python.Retreive.executor&quot;: &quot;Run&quot;,
@@ -56,6 +62,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Users/speed/miniconda3/condabin/conda.bat&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -250,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722959023848</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="more bug fixes">
+      <option name="closed" value="true" />
+      <created>1722962822253</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1722962822253</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,6 +300,7 @@
     <MESSAGE value="begin creating Compiler.py" />
     <MESSAGE value="work on Compiler.py and Feature_Selection.py" />
     <MESSAGE value="bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixes" />
+    <MESSAGE value="more bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="more bug fixes" />
   </component>
 </project>

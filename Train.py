@@ -7,7 +7,6 @@ import ray
 from ray import tune
 from ray.tune.search.hyperopt import HyperOptSearch
 from hyperopt import hp
-from ray.data import Dataset, Preprocessor
 from ray.train import ScalingConfig
 from ray.train.xgboost import XGBoostTrainer
 import xgboost

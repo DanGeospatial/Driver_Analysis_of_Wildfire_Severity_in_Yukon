@@ -23,8 +23,6 @@ polygons = "D:/Research/Masters/5_Extracted/dNBR/Polygons/"
 climate_loc = "I:/Wildfire_Climate_Export_v2/"
 export_path = "I:/Wildfire_Extracted_v2/"
 
-# Turn this on if you want files to be resampled to 30m
-resample = True
 
 # Only turn this on if you want to extract new climate data
 # Right now it is set to fire season
@@ -58,5 +56,5 @@ for fire in fires:
     getLC(fire_box, save_loc)
     getpre(fire_box, year_of_fire, save_loc)
     # Check getClimate function to choose which average period is extracted
-    getClimate(fire_box, year_of_fire, save_loc, resample)
+    getClimate(fire_box, year_of_fire, save_loc)
 

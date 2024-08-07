@@ -1,8 +1,11 @@
 import cdsapi
+import os
+os.environ["CRYPTOGRAPHY_OPENSSL_NO_LEGACY"] = "yes"
 import ee
 import geemap
 import whitebox_tools
 from Data_Processing_and_Conversion.Scaler import resample_cubic
+import PIL.Image as _imaging
 
 url = "https://earthengine-highvolume.googleapis.com"
 out_loc = "I:/Wildfire_Climate_Export_v2/"
@@ -72,17 +75,20 @@ def getERA5L(year):
     geemap.ee_to_geotiff(ee_object=average, output=output, resolution=11132)
 
 
-def getClimate(area, year, savepath, resample):
+def getClimate(area, year, savepath):
     # This function is for yearly or seasonally averaged data
     # - 3 for 3y average before fire
     # year = year for current fire season
 
     year = int(year)
     year = year - 3
-    file_pre = ("I:/Wildfire_Aligned_Rasters_v2/average_" + str(year) + ".tif")
-    save_loc = savepath + "_clm" + ".tif"
 
-    wbt.clip_raster_to_polygon(i=file_pre, polygons=area, output=save_loc)
+    bands = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
+             30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]
 
-    if resample:
-        resample_cubic(save_loc)
+    for band in bands:
+        file_b = "I:/Wildfire_Aligned_Rasters_v2/average_" + str(year) + "_" + str(band) + ".tif"
+        output_b = "I:/Wildfire_Aligned_Rasters_v2/average_" + str(year) + "_" + str(band) + "_rs" + ".tiff"
+        save_loc = savepath + "_clm" + ".tif"
+        resample_cubic(file_b)
+        wbt.clip_raster_to_polygon(i=output_b, polygons=area, output=save_loc)

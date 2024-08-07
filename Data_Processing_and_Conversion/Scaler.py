@@ -9,12 +9,12 @@ base = "D:/Research/Masters/3_Initial_Processing_Files/LandTrendR/LTR1_5/NBR_Fit
 
 
 def resample_nearest(raster):
-    output_name = raster + "_ rs" + ".tiff"
+    output_name = str(raster).removesuffix('.tif') + "_rs" + ".tiff"
 
     wbt.resample(inputs=raster, output=output_name, base=base, method='nn')
 
 
 def resample_cubic(raster):
-    output_name = raster + "_ rs" + ".tiff"
+    output_name = str(raster).removesuffix('.tif') + "_rs" + ".tiff"
 
     wbt.resample(inputs=raster, output=output_name, base=base, method='cc')

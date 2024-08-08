@@ -1,16 +1,19 @@
 """
 Remove features to improve accuracy and efficiency by dropping features that are unimportant, add error, etc.
 """
+import pandas as pd
 
 # Print column headers
-
-# Plot averages and stats
 
 # Remove variables that are known to have errors
 
 # Drop irrelevant features, i.e. lake temperature
 
-# Print remaining columns
+# Plot averages and stats
+
+# Remove rows that are not burned
+
+# Print remaining columns and rows
 
 # Input into feature elimination
 

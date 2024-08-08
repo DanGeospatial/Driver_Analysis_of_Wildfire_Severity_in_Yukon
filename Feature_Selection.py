@@ -7,6 +7,7 @@ from os import scandir
 input_path = "I:/Wildfire_Compiled_v2/"
 datasets_path = "I:/Wildfire_Datasets_v2/combined.csv"
 clean_path = "I:/Wildfire_Datasets_v2/combined_clean.csv"
+checked_path = "I:/Wildfire_Datasets_v2/combined_check.csv"
 combined_ds = []
 
 # Merge all the csv files into one
@@ -21,7 +22,7 @@ df.to_csv(datasets_path)
 print(df.columns)
 
 # Remove variables that are known to have errors
-error_columns = ['Field1', 'x', 'y', 'spatial_ref', '49_clm', '50_clm']
+error_columns = ['Unnamed: 0', 'x', 'y', 'spatial_ref', '49_clm', '50_clm', 'clm']
 df.drop(error_columns, axis=1, inplace=True)
 
 # Drop irrelevant features, i.e. lake temperature
@@ -41,4 +42,8 @@ print(df.columns)
 print(df.shape)
 print(df.eq(0).sum().sum())
 print(df.isnull().sum().sum())
-print(df.boxplot(column=['dNBR', 'Slope', '2_clm']))
+
+# Double Check Input Data
+df = df[df.dNBR != -340282300000000000000000000000000000000.00]
+df.to_csv(checked_path)
+df.boxplot(column=['dNBR', 'Slope', '2_clm'])

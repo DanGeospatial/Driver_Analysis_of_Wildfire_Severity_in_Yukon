@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="optimize imports">
-      <change afterPath="$PROJECT_DIR$/Feature_Elimination.py" afterDir="false" />
+    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="finish Feature_Selection.py, start Feature_Elimination.py">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Feature_Elimination.py" beforeDir="false" afterPath="$PROJECT_DIR$/Feature_Elimination.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Feature_Selection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Feature_Selection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +51,7 @@
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Python.Compiler.executor": "Run",
+    "Python.Feature_Elimination.executor": "Run",
     "Python.Feature_Selection.executor": "Run",
     "Python.Fire_danger_indices_ERA5.executor": "Run",
     "Python.Plotter_OLD3Y.executor": "Run",
@@ -319,7 +320,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723141333158</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="optimize imports">
+      <option name="closed" value="true" />
+      <created>1723145468516</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1723145468516</updated>
+    </task>
+    <task id="LOCAL-00031" summary="finish Feature_Selection.py, start Feature_Elimination.py">
+      <option name="closed" value="true" />
+      <created>1723145624935</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1723145624935</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -334,7 +351,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Introduce climate data" />
     <MESSAGE value="refine project structure" />
     <MESSAGE value="ray method done without feature selection" />
     <MESSAGE value="fix dir path limit nonsense" />
@@ -359,6 +375,7 @@
     <MESSAGE value="work on Compiler.py &amp; Feature_Selection.py" />
     <MESSAGE value="finish Compiler.py" />
     <MESSAGE value="optimize imports" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimize imports" />
+    <MESSAGE value="finish Feature_Selection.py, start Feature_Elimination.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish Feature_Selection.py, start Feature_Elimination.py" />
   </component>
 </project>

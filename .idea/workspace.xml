@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="finish Compiler.py" />
+    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="optimize imports">
+      <change afterPath="$PROJECT_DIR$/Feature_Elimination.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Feature_Selection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Feature_Selection.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,22 +47,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Python.Compiler.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Fire_danger_indices_ERA5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Plotter_OLD3Y.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Retreive.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Train.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Users/speed/miniconda3/condabin/conda.bat&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Python.Compiler.executor": "Run",
+    "Python.Feature_Selection.executor": "Run",
+    "Python.Fire_danger_indices_ERA5.executor": "Run",
+    "Python.Plotter_OLD3Y.executor": "Run",
+    "Python.Retreive.executor": "Run",
+    "Python.Train.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/Users/speed/miniconda3/condabin/conda.bat",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Research\Wildfire Publications\Case Study\Revised Research\Yukon Wildfire Drivers v2\Extra &amp; Old Processing Scripts" />
@@ -306,7 +311,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723141267168</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="optimize imports">
+      <option name="closed" value="true" />
+      <created>1723141333158</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1723141333158</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -345,6 +358,7 @@
     <MESSAGE value="add helper scripts" />
     <MESSAGE value="work on Compiler.py &amp; Feature_Selection.py" />
     <MESSAGE value="finish Compiler.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish Compiler.py" />
+    <MESSAGE value="optimize imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimize imports" />
   </component>
 </project>

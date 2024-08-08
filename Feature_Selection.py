@@ -44,6 +44,7 @@ print(df.eq(0).sum().sum())
 print(df.isnull().sum().sum())
 
 # Double Check Input Data
-df = df[df.dNBR != -340282300000000000000000000000000000000.00]
-df.to_csv(checked_path)
+# This part is not needed I check the data in another software
+# df = df[df.dNBR != -340282300000000000000000000000000000000.00]
+# df.to_csv(checked_path)
 df.boxplot(column=['dNBR', 'Slope', '2_clm'])

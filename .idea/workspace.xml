@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="finish Feature_Selection.py, start Feature_Elimination.py">
+    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="bug fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Feature_Elimination.py" beforeDir="false" afterPath="$PROJECT_DIR$/Feature_Elimination.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Feature_Selection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Feature_Selection.py" afterDir="false" />
@@ -336,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723145624935</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="bug fixes">
+      <option name="closed" value="true" />
+      <created>1723149853057</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1723149853057</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -369,13 +377,13 @@
     <MESSAGE value="optimize Retreive.py" />
     <MESSAGE value="begin creating Compiler.py" />
     <MESSAGE value="work on Compiler.py and Feature_Selection.py" />
-    <MESSAGE value="bug fixes" />
     <MESSAGE value="more bug fixes" />
     <MESSAGE value="add helper scripts" />
     <MESSAGE value="work on Compiler.py &amp; Feature_Selection.py" />
     <MESSAGE value="finish Compiler.py" />
     <MESSAGE value="optimize imports" />
     <MESSAGE value="finish Feature_Selection.py, start Feature_Elimination.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish Feature_Selection.py, start Feature_Elimination.py" />
+    <MESSAGE value="bug fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixes" />
   </component>
 </project>

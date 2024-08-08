@@ -3,7 +3,7 @@ Remove features to improve accuracy and efficiency by dropping features that are
 """
 # from ray.train import ScalingConfig
 # from ray.train.xgboost import XGBoostTrainer
-import pandas as pd
+
 
 checked_path = "I:/Wildfire_Datasets_v2/combined_check.csv"
 

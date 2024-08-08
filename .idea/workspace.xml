@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="work on Compiler.py &amp; Feature_Selection.py">
-      <change beforePath="$PROJECT_DIR$/.idea/Yukon Wildfire Drivers v2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Yukon Wildfire Drivers v2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data_Processing_and_Conversion/Compiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data_Processing_and_Conversion/Compiler.py" afterDir="false" />
-    </list>
+    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="finish Compiler.py" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -303,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723132783421</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="finish Compiler.py">
+      <option name="closed" value="true" />
+      <created>1723141267168</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1723141267168</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -341,6 +344,7 @@
     <MESSAGE value="more bug fixes" />
     <MESSAGE value="add helper scripts" />
     <MESSAGE value="work on Compiler.py &amp; Feature_Selection.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="work on Compiler.py &amp; Feature_Selection.py" />
+    <MESSAGE value="finish Compiler.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish Compiler.py" />
   </component>
 </project>

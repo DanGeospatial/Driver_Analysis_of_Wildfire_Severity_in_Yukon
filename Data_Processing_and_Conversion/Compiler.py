@@ -1,9 +1,7 @@
 """
 This will control creating the large wildfire dataset
 """
-import os
 import xarray as xr
-import xarray_extras.csv as csv
 from os import scandir
 from osgeo import gdal
 import rasterio

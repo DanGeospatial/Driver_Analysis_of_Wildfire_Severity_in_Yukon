@@ -16,6 +16,7 @@ fires = ['81', '326', '162', '109', '83', '228', '113', '227', '157', '115', '64
          '329', '15', '129', '28', '321', '333']
 
 import_path = "I:/Wildfire_Extracted_v2/"
+output_path = "I:/Wildfire_Compiled_v2/"
 
 print("Warning! If your files are not aligned PERFECTLY then this tool will not work properly!")
 print(gdal.VersionInfo())
@@ -28,9 +29,13 @@ for fire in fires:
         for file in it:
             if file.is_file():
                 file_name = input_dir + file.name
-                ds = rioxarray.open_rasterio(file_name)
+                dr = rioxarray.open_rasterio(file_name, band_as_variable=True)
+                remove_char = fire + "_"
+                new_name = file.name.replace('.tif', '').replace(remove_char, '')
+                name_dict = {'band_1': new_name}
+                ds = dr.rename_vars(name_dict=name_dict)
                 combined_ds.append(ds)
 
-    output_ds = xr.combine_by_coords(combined_ds)
-    print(output_ds)
-    csv.to_csv(output_ds, (input_dir + fire + ".csv"))
+    file_out = output_path + fire + ".csv"
+    output_ds = xr.merge(combined_ds)
+    output_ds.to_dask_dataframe().to_csv(file_out, single_file=True)

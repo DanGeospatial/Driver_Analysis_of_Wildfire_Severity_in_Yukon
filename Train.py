@@ -21,7 +21,6 @@ dataset = ray.data.read_csv(dNBR3Y)
 train, valid = dataset.train_test_split(test_size=0.25)
 
 scaling_config = ScalingConfig(
-    num_workers=8,
     use_gpu=True
 )
 

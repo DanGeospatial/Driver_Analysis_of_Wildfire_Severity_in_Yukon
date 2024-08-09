@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="bug fixes">
-      <change afterPath="$PROJECT_DIR$/Extra &amp; Old Processing Scripts/testing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Extra &amp; Old Processing Scripts/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extra &amp; Old Processing Scripts/testing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Feature_Elimination.py" beforeDir="false" afterPath="$PROJECT_DIR$/Feature_Elimination.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Train.py" beforeDir="false" afterPath="$PROJECT_DIR$/Train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,7 +354,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723154339516</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="bug fixes">
+      <option name="closed" value="true" />
+      <created>1723169048015</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1723169048015</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

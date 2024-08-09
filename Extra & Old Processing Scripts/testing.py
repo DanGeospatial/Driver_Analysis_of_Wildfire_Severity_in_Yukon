@@ -10,16 +10,20 @@ dataset = ray.data.read_csv(checked_data)
 
 # Configure workers
 scaling_config = ScalingConfig(
-    num_workers=16,
     use_gpu=True
 )
 
 train, valid = dataset.train_test_split(test_size=0.25)
 
+parameters = {
+    "eval_metric": "rmse",
+}
+
 # Train Classifier
 trainer = XGBoostTrainer(
     datasets={"train": train, "valid": valid},
     label_column="dNBR",
+    params=parameters,
     scaling_config=scaling_config,
 )
 
@@ -29,3 +33,4 @@ print(acc)
 # Get Variable Importance
 # iterimportance = trained.metrics.get()
 print(trained.metrics)
+print(trained)

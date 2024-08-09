@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="switch to sklearn for rfe">
+    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="adjust Train.py settings">
+      <change afterPath="$PROJECT_DIR$/Validation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Feature_Elimination.py" beforeDir="false" afterPath="$PROJECT_DIR$/Feature_Elimination.py" afterDir="false" />
     </list>
@@ -71,6 +72,35 @@
       <recent name="D:\Research\Wildfire Publications\Case Study\Revised Research\Yukon Wildfire Drivers v2\Data Processing and Conversion" />
       <recent name="D:\Research\Wildfire Publications\Case Study\Revised Research\Yukon Wildfire Drivers v2\Data Retreival" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Feature_Elimination" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Yukon Wildfire Drivers v2" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Feature_Elimination.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Feature_Elimination" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -368,7 +398,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723174079729</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="adjust Train.py settings">
+      <option name="closed" value="true" />
+      <created>1723175005968</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1723175005968</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -383,7 +421,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ray method done without feature selection" />
     <MESSAGE value="fix dir path limit nonsense" />
     <MESSAGE value="clean up" />
     <MESSAGE value="build scaler and continue with data retrieval methods" />
@@ -408,6 +445,7 @@
     <MESSAGE value="finish Feature_Selection.py, start Feature_Elimination.py" />
     <MESSAGE value="bug fixes" />
     <MESSAGE value="switch to sklearn for rfe" />
-    <option name="LAST_COMMIT_MESSAGE" value="switch to sklearn for rfe" />
+    <MESSAGE value="adjust Train.py settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust Train.py settings" />
   </component>
 </project>

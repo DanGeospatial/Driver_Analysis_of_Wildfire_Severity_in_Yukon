@@ -19,6 +19,6 @@ train_x, test_x = train_test_split(x, test_size=0.25)
 estimator = XGBRegressor()
 eliminator = RFECV(estimator=estimator, cv=5, scoring='neg_mean_squared_error', min_features_to_select=1, step=1)
 rfe = eliminator.fit(train_x, train_y)
-print('Best Parameters:', rfe.best_params_)
+print(rfe.ranking_)
 print(rfe.cv_results_)
-
+print(rfe.n_features_)

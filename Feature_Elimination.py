@@ -1,7 +1,6 @@
 """
-Remove features to improve accuracy and efficiency by dropping features that are unimportant, add error, etc.
+Remove features to improve accuracy and efficiency by dropping features that are unimportant
 """
-import sklearn.metrics
 import pandas as pd
 from sklearn.feature_selection import RFECV
 from xgboost.sklearn import XGBRegressor

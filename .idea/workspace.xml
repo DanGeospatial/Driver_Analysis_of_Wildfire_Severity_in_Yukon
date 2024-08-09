@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="bug fixes">
+    <list default="true" id="52f755c7-cda2-4b41-a349-5f6c538f6026" name="Changes" comment="switch to sklearn for rfe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Extra &amp; Old Processing Scripts/testing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Extra &amp; Old Processing Scripts/testing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Feature_Elimination.py" beforeDir="false" afterPath="$PROJECT_DIR$/Feature_Elimination.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Train.py" beforeDir="false" afterPath="$PROJECT_DIR$/Train.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -362,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723169048015</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="switch to sklearn for rfe">
+      <option name="closed" value="true" />
+      <created>1723174079729</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1723174079729</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -377,7 +383,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refine project structure" />
     <MESSAGE value="ray method done without feature selection" />
     <MESSAGE value="fix dir path limit nonsense" />
     <MESSAGE value="clean up" />
@@ -402,6 +407,7 @@
     <MESSAGE value="optimize imports" />
     <MESSAGE value="finish Feature_Selection.py, start Feature_Elimination.py" />
     <MESSAGE value="bug fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixes" />
+    <MESSAGE value="switch to sklearn for rfe" />
+    <option name="LAST_COMMIT_MESSAGE" value="switch to sklearn for rfe" />
   </component>
 </project>

@@ -12,7 +12,7 @@ from ray.train.xgboost import XGBoostTrainer
 import xgboost
 
 # Import Data
-dNBR3Y = "D:/Research/Masters/8_RStudio/Input Data/ERA5/total/dNBR_total_3y.csv"
+dNBR3Y = "I:/Wildfire_Datasets_v2/combined_reduced.csv"
 
 ray.init(include_dashboard=False)
 
@@ -43,7 +43,7 @@ def objective(config):
         label_column="dNBR",
         params=parameters,
         scaling_config=scaling_config,
-        # num_boost_round and num_parallel_tree
+        num_boost_round=config["num_boost_round"]
     )
 
     trained = trainer.fit()
@@ -64,7 +64,8 @@ search_config = {
     "subsample": tune.loguniform(0.5, 1),
     "colsample_bytree": tune.loguniform(0.5, 1),
     "lambda": tune.randint(1, 5),
-    "alpha": tune.randint(0, 5)
+    "alpha": tune.randint(0, 5),
+    "num_boost_round": tune.choice([100, 200, 300, 400, 500])
 }
 
 
